@@ -33,9 +33,33 @@ public class PostgresController {
     public void createTable() throws SQLException {
         String query = "drop table if exists employee;" +
                 "create table employee(id serial primary key,name varchar(30),designation varchar(30),salary float ,experience int,fileType varchar(30));";
-        System.out.println("Table Creating " + postgresDB.getStatement().execute(query));
+        postgresDB.getStatement().execute(query);
+        System.out.println("Table Created ");
     }
 
+    public void updateSalary() throws SQLException{
+        String query = "update employee set salary =" +"CASE\n" +
+
+                "WHEN rating>4 THEN salary + salary*0.3 \n" +
+
+                "WHEN rating>3 THEN salary + salary*0.2\n" +
+
+                "WHEN rating>2 THEN salary + salary*0.1\n" +
+
+                "ELSE salary\n" +
+
+                "END;";
+        postgresDB.getStatement().executeUpdate(query);
+    }
+
+    public void getExperiencedEmployeeCount() throws SQLException{
+        String query = "select count(*) from employee where experience > 4 ";
+
+        ResultSet resultSet = postgresDB.getStatement().executeQuery(query);
+        while (resultSet.next()){
+            System.out.println("Count of employees who has experience more than 4 years: "+resultSet.getString(1));
+        }
+    }
 
     public void prepareSQLBunchInsert(ArrayList<Employee> employees){
         PreparedStatement preparedStatement =null;

@@ -10,7 +10,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/postgresql-42.4.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/../postgresql-42.4.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -19,23 +19,13 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/opencsv-3.8.jar!/" />
+          <root url="jar://$MODULE_DIR$/../json-simple-1.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/json-simple-1.1.1.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="library" name="postgresql-42.4.2" level="project" />
-    <orderEntry type="library" name="json-simple-1.1.1" level="project" />
+    <orderEntry type="library" name="json-simple-1.1" level="project" />
     <orderEntry type="library" name="opencsv-3.8" level="project" />
   </component>
 </module>

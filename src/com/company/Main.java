@@ -36,6 +36,7 @@ public class Main {
             for (int i = 0; i < files.length; i++) {
                 threadPool[i].join();
             }
+            postgresController.getExperiencedEmployeeCount();
 
 
         }catch (Exception e){
