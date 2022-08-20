@@ -74,7 +74,7 @@ public class PostgresController {
     public  Thread getParseThread(String type,String fileName)
             throws UnknownFileTypeException, FileTypeNotMatchedException,FileNotFoundException, EmptyFileException {
 
-        String basePath = System.getProperty("user.dir") + "/src/";
+        String basePath = System.getProperty("user.dir")+"/";
 
         DataParserFactory dataParserFactory = new DataParserFactory();
         DataParser parser = dataParserFactory.getParserObject(type);

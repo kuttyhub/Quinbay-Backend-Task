@@ -30,7 +30,6 @@ public class PostgresDB {
 
         return instance;
     }
-
     public static synchronized PostgresDB createInstance(String DB_NAME){
         if(instance != null){
             return instance;
